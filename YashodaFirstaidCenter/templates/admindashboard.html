@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashoda FirstAid Center - Admin Dashboard</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="container">
+            <ul class="menu">
+                <img style="margin-right: 766px;" src="{% static 'images/Yashoda Clinic Logo.png' %}" alt="Yashoda FirstAid Center Logo" class="logo">
+                <li><a href="{% url 'adminhome' %}">Home</a></li>
+                <li><a href="{% url 'admindashboard' %}" class="active">View Appointments</a></li>
+                <li><a href="{% url 'login' %}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="appointments">
+    <div class="container">
+        <h2>Appointments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appointment in appointments %}
+                <tr>
+                    <td>{{ appointment.full_name }}</td>
+                    <td>{{ appointment.email }}</td>
+                    <td>{{ appointment.phone_number }}</td>
+                    <td>{{ appointment.date }}</td>
+                    <td>{{ appointment.message }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5">No appointments found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Yashoda FirstAid Center. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

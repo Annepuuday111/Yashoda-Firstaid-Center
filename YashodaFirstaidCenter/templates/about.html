@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashoda FirstAid Center</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="container">
+            <ul class="menu">
+                <img style="margin-right: 830px;" src="{% static 'images/Yashoda Clinic Logo.png' %}" alt="Yashoda FirstAid Center Logo" class="logo">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Yashoda FirstAid Center is dedicated to providing high-quality medical care to our patients.</p>
+
+        <div class="about-gallery">
+            <img src="{% static 'images/home1.jpg' %}" alt="Doctor 1">
+            <img src="{% static 'images/home2.jpg' %}" alt="Doctor 2">
+            <img src="{% static 'images/home3.jpg' %}" alt="Doctor 3">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Yashoda FirstAid Center. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

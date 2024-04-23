@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashoda FirstAid Center</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="container">
+            <ul class="menu">
+                <img style="margin-right: 1103px;"  src="{% static 'images/Yashoda Clinic Logo.png' %}" alt="Yashoda FirstAid Center Logo" class="logo">
+                <li><a href="{% url 'index' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<section id="login">
+    <h2 align="center">Login</h2>
+    <div class="container">
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" class="book-appointment-btn" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Yashoda FirstAid Center. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function validateLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username === 'admin' && password === 'password') {
+            window.location.href = '{% url 'adminhome' %}';
+        } else {
+            alert('Invalid credentials. Please try again.');
+        }
+    }
+</script>
+
+</body>
+</html>

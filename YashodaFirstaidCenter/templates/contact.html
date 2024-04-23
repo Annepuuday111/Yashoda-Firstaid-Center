@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashoda FirstAid Center</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="container">
+            <ul class="menu">
+                <img style="margin-right: 810px;" src="{% static 'images/Yashoda Clinic Logo.png' %}" alt="Yashoda FirstAid Center Logo" class="logo">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Google Map -->
+<section id="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3819.8756011489813!2d81.2259177751513!3d16.78286358400485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTbCsDQ2JzU4LjMiTiA4McKwMTMnNDIuNiJF!5e0!3m2!1sen!2sin!4v1713716880334!5m2!1sen!2sin" width="1400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Reach out to us for any inquiries or appointments.</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Yashoda FirstAid Center. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
