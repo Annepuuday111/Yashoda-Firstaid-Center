@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib import messages
 from .forms import AppointmentForm
 from .models import Appointment
 
@@ -29,8 +29,10 @@ def booking(request):
         form = AppointmentForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("Appointment Added Successfully")
+            messages.info(request, "Thank you! The data was successfully submitted.")
+            return HttpResponseRedirect('/booking/')
         else:
+            messages.info(request, " The data was not submitted.")
             print(form.errors)
     else:
         form = AppointmentForm()

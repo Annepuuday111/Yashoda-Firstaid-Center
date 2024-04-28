@@ -9,3 +9,6 @@ class Appointment(models.Model):
 
     class Meta:
         db_table = 'appointment_table'
+
+    def __str__(self):
+        return self.full_name
