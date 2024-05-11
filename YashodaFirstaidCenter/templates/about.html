@@ -14,11 +14,10 @@
     <nav>
         <div class="container">
             <ul class="menu">
-                <img style="margin-right: 830px;" src="{% static 'images/YFC.png' %}" alt="Yashoda FirstAid Center Logo" class="logo">
+                <li><img style="margin-right: 550px;"  src="{% static 'images/YFC.png' %}" alt="Yashoda FirstAid Center Logo" class="logo"></li>
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'services' %}">Services</a></li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </div>
@@ -29,11 +28,13 @@
     <div class="container">
         <h2>About Us</h2>
         <p>Yashoda FirstAid Center is dedicated to providing high-quality medical care to our patients.</p>
-
         <div class="about-gallery">
-            <img src="{% static 'images/home1.jpg' %}" alt="Doctor 1">
-            <img src="{% static 'images/home2.jpg' %}" alt="Doctor 2">
-            <img src="{% static 'images/home3.jpg' %}" alt="Doctor 3">
+            <img src="{% static 'images/Aravind.jpg' %}" alt="Doctor 3"><br><br>
+            <div class="contact-card">
+                <p><strong>Dr. Annepu NagaRaju (APMP)</strong></p>
+                <p>Gundugolanu Pedda Mill Road Dokala Vari Veedi</p>
+                <p>Phone: 7893962104</p>
+            </div>
         </div>
     </div>
 </section>
